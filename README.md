@@ -17,11 +17,13 @@ ibm-datascience-capstone-spacex/
 │
 ├─ notebooks/
 │ ├─ 01.Data_collection_API_Lab.ipynb
-│ ├─ 02_web_scraping.ipynb
-│ ├─ 03_data_wrangling.ipynb
-│ ├─ 04_eda.ipynb
-│ ├─ 05_dashboards.ipynb
-│ └─ 06_classification.ipynb
+│ ├─ 02.Data_collection_Web_Scraping_Lab.ipynb
+│ ├─ 03.Data_Wrangling.ipynb
+│ ├─ 04.EDA_with_SQL.ipynb
+│ ├─ 05.EDA_with_Visualization_Lab.ipynb
+│ ├─ 06.Interactive_Visual_Analytics_with_Folium.ipynb
+│ ├─ 07.Interactive_Visual_Analytics_with_Plotly_Dash.ipynb
+│ └─ 08.Machine_Learning_Prediction_Lab.ipynb
 │
 ├─ reports/
 │ ├─ figures/
