@@ -13,11 +13,10 @@ Reusability of the first stage plays a key role in reducing launch costs, making
 ibm-datascience-capstone-spacex/
 │
 ├─ data/
-│ ├─ raw/ # Raw data collected from APIs and web scraping
-│ └─ processed/ # Cleaned and processed datasets
+│ ├─ dataset_part_1.csv
 │
 ├─ notebooks/
-│ ├─ 01_data_collection_api.ipynb
+│ ├─ 01.Data_collection_API_Lab.ipynb
 │ ├─ 02_web_scraping.ipynb
 │ ├─ 03_data_wrangling.ipynb
 │ ├─ 04_eda.ipynb
@@ -48,7 +47,7 @@ The project follows an end-to-end data science workflow:
 1. Data collection using APIs and web scraping  
 2. Data wrangling and preprocessing  
 3. Exploratory Data Analysis (EDA)  
-4. Interactive visual analytics and dashboards  
+4. Interactive visual analytics and dashboard 
 5. Predictive analysis using classification models  
 6. Presentation of data-driven insights  
 
@@ -60,6 +59,7 @@ The project follows an end-to-end data science workflow:
 - Requests, BeautifulSoup
 - Matplotlib, Seaborn
 - Scikit-learn
+- Dash
 - Jupyter Notebook
 - Git & GitHub
 
