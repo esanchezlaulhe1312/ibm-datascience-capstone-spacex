@@ -1,6 +1,7 @@
 # IBM Data Science Capstone – SpaceX Falcon 9 Landing Prediction
 
 ## Project Overview
+
 This repository contains the IBM Data Science Capstone Project.  
 The objective of this project is to analyze historical SpaceX Falcon 9 launch data and build predictive models to determine whether the first stage of the rocket will successfully land and be reused.
 
@@ -9,11 +10,15 @@ Reusability of the first stage plays a key role in reducing launch costs, making
 ---
 
 ## Project Structure
+
 ```
 ibm-datascience-capstone-spacex/
 │
 ├─ data/
-│ ├─ dataset_part_1.csv
+│ └─ processed/
+│   ├─  dataset_part_1.csv
+│   ├─  dataset_part_2.csv
+│   └─  spacex_web_scraped.csv
 │
 ├─ notebooks/
 │ ├─ 01.Data_collection_API_Lab.ipynb
@@ -36,26 +41,31 @@ ibm-datascience-capstone-spacex/
 ├─ requirements.txt
 └─ .gitignore
 ```
+
 ---
 
 ## Data Sources
+
 - **SpaceX REST API** – Historical launch data  
 - **Wikipedia** – Supplementary launch records obtained via web scraping  
 
 ---
 
 ## Methodology
+
 The project follows an end-to-end data science workflow:
-1. Data collection using APIs and web scraping  
+
+1. Data collection using APIs and web scraping
 2. Data wrangling and preprocessing  
 3. Exploratory Data Analysis (EDA)  
-4. Interactive visual analytics and dashboard 
+4. Interactive visual analytics and dashboard
 5. Predictive analysis using classification models  
 6. Presentation of data-driven insights  
 
 ---
 
 ## Tools & Technologies
+
 - Python
 - Pandas, NumPy
 - Requests, BeautifulSoup
@@ -68,10 +78,12 @@ The project follows an end-to-end data science workflow:
 ---
 
 ## Project Status
+
  **In progress**  
 Currently working on **Module 1: Introduction & Data Collection**
 
 ---
 
 ## Author
+
 Elena Sánchez Laulhé
