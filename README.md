@@ -149,19 +149,19 @@ These insights guide the subsequent stages of feature selection, model developme
 - Python
 - Pandas, NumPy
 - Requests, BeautifulSoup
-- SQLite / SQL
 - Matplotlib, Seaborn
 - Folium
 - Plotly Dash
 - Scikit-learn
 - Jupyter Notebook
-- Git & GitHub
+- GitHub
 
 ---
 
 ## How to Run Locally
 
 git clone <https://github.com/esanchezlaulhe1312/ibm-datascience-capstone-spacex.git>
+
 cd ibm-datascience-capstone-spacex
 
 py -m venv .venv
@@ -169,7 +169,9 @@ py -m venv .venv
 ## Activate environment (Windows)
 
 .\.venv\Scripts\Activate.ps1
+
 pip install -r requirements.txt
+
 jupyter notebook
 
 ---
