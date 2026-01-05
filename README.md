@@ -31,6 +31,7 @@ ibm-datascience-capstone-spacex/
 ├─ data/
 │ └─ raw/
 │   ├─  spacex_launch_geo.csv
+│   ├─  spacex_launch_dash.csv
 │   └─  spacex.csv
 │
 │ └─ processed/
@@ -46,7 +47,7 @@ ibm-datascience-capstone-spacex/
 │ ├─ 04.EDA_with_SQL.ipynb
 │ ├─ 05.EDA_with_Visualization_Lab.ipynb
 │ ├─ 06.Interactive_Visual_Analytics_with_Folium.ipynb
-│ ├─ 07.Interactive_Visual_Analytics_with_Plotly_Dash.ipynb
+│ ├─ 07.Interactive_Visual_Analytics_with_Plotly_Dash.py
 │ └─ 08.Machine_Learning_Prediction_Lab.ipynb
 │
 ├─ reports/
@@ -54,7 +55,7 @@ ibm-datascience-capstone-spacex/
 │ └─ slides/
 │
 ├─ docs/
-│ └─ project_log.docx
+│ └─ IBM_Capstone_Report.docx
 │
 ├─ README.md
 ├─ requirements.txt
@@ -95,7 +96,13 @@ ibm-datascience-capstone-spacex/
 - `04.EDA_with_SQL.ipynb`  
 - `05.EDA_with_Visualization_Lab.ipynb`  
 
-Exploration of relationships between launch success and variables such as payload mass, orbit type, launch site, and booster reuse.
+Key exploratory insights derived from SQL queries and data visualizations include:
+
+- Launch success rates vary significantly across launch sites, with **KSC LC-39A** showing the highest overall success performance.
+- Payload mass has a noticeable impact on mission outcome: **mid-range payloads** tend to have higher success rates compared to very low or very high payloads.
+- Certain orbital types (e.g., LEO) are associated with higher launch success rates.
+- Reused boosters show improved success outcomes compared to early non-reused missions, indicating operational maturity over time.
+- Later Falcon 9 versions demonstrate higher reliability than earlier versions.
 
 ### 5. Interactive Visual Analytics
 
@@ -103,9 +110,23 @@ Exploration of relationships between launch success and variables such as payloa
 
 - `06.Interactive_Visual_Analytics_with_Folium.ipynb`
 
+Using interactive maps, spatial patterns of launch sites were analyzed:
+
+- Launch sites are located **close to coastlines**, supporting safe downrange trajectories.
+- Sites are generally **near highways and railways**, enabling efficient logistics and transportation of launch components.
+- Launch facilities maintain a **clear distance from dense urban areas**, minimizing risk to populated regions.
+- Proximity to infrastructure appears to be a strategic factor in site selection.
+
 - `07.Interactive_Visual_Analytics_with_Plotly_Dash.ipynb`  
 
-Geospatial analysis of launch sites and interactive dashboards for deeper insight exploration.
+An interactive dashboard was developed to explore launch performance dynamically. Key insights include:
+
+- **KSC LC-39A** has both the largest number of successful launches and the highest success rate.
+- Payload ranges between **2,000 kg and 6,000 kg** show the highest launch success rates.
+- Very low and very high payload ranges exhibit lower success rates.
+- The **Falcon 9 FT and B5 booster versions** achieve the highest launch success rates, reflecting technological improvements over time.
+
+These interactive tools allow users to filter by launch site and payload range, enabling deeper insight into factors influencing mission success.
 
 ### 6. Predictive Analysis
 
@@ -136,23 +157,26 @@ The project follows a structured data science methodology:
 
 ---
 
-## Geospatial Insights from Folium Analysis
+## Insights from Folium Plotly Dash
 
-Using interactive maps built with Folium, the spatial distribution of SpaceX launch sites was analyzed to understand geographical and infrastructural patterns. The following questions were addressed based on visual inspection and distance measurements:
+This interactive dashboard enables dynamic exploration of SpaceX launch records by launch site and payload range. By combining dropdown filters, sliders, pie charts, and scatter plots, it provides actionable insights into launch success patterns:
 
-- **Are launch sites in close proximity to railways?**  
-  Yes. Launch sites are generally located near railway infrastructure, which facilitates the transportation of large and heavy rocket components.
+- **Which site has the largest successful launches?**  
+  KSC LC-39A has the largest absolute number of successful launches among all sites.
 
-- **Are launch sites in close proximity to highways?**  
-  Yes. All launch sites are located close to highways, indicating intentional planning to ensure accessibility and efficient ground transportation.
+- **Which site has the highest launch success rate?**  
+  KSC LC-39A also shows the highest launch success rate, with the largest proportion of successful launches relative to failures.
 
-- **Are launch sites in close proximity to coastline?**  
-  Yes. All SpaceX launch sites are situated near coastlines, which aligns with safety requirements and allows launch trajectories over the ocean.
+- **Which payload range(s) has the highest launch success rate?**  
+  Payloads in the mid-range (approximately 2,000 kg to 6,000 kg) show the highest concentration of successful launches.
 
-- **Do launch sites keep certain distance away from cities?**  
-  Yes. Launch sites are located at a safe distance from major cities, reducing risk to populated areas and ensuring operational safety.
+- **Which payload range(s) has the lowest launch success rate?**  
+  Very low payloads (below 1,000 kg) and very high payloads (above 8,000 kg) exhibit lower success rates and a higher proportion of failures.
 
-These geospatial insights highlight the importance of location, safety, and logistics in launch site selection and provide valuable context for subsequent predictive analysis.
+- **Which Falcon 9 Booster version has the highest launch success rate?**
+  The Falcon 9 Full Thrust (FT) booster version demonstrates the highest launch success rate, followed closely by B4 and B5, while earlier versions (v1.0 and v1.1) show lower reliability.
+
+These insights highlight how launch site maturity, optimal payload ranges, and booster evolution significantly impact mission success.
 
 ---
 
