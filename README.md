@@ -35,6 +35,7 @@ ibm-datascience-capstone-spacex/
 │ └─ processed/
 │   ├─  dataset_part_1.csv
 │   ├─  dataset_part_2.csv
+│   ├─  dataset_part_3.csv
 │   └─  spacex_web_scraped.csv
 │
 ├─ notebooks/
