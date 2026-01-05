@@ -29,6 +29,9 @@ At the current stage, the project covers:
 ibm-datascience-capstone-spacex/
 │
 ├─ data/
+│ └─ raw/
+│   └─  spacex.csv
+│
 │ └─ processed/
 │   ├─  dataset_part_1.csv
 │   ├─  dataset_part_2.csv
