@@ -57,6 +57,10 @@ ibm-datascience-capstone-spacex/
 ├─ docs/
 │ └─ IBM_Capstone_Report.docx
 │
+├─ images/
+│ ├─ plotly_dash_screenshots/
+│ └─ logos/
+│
 ├─ README.md
 ├─ requirements.txt
 └─ .gitignore
@@ -132,8 +136,26 @@ These interactive tools allow users to filter by launch site and payload range, 
 
 **Notebook:** `08.Machine_Learning_Prediction_Lab.ipynb`  
 
-- Classification models to predict first-stage landing success  
-- Model evaluation and comparison  
+In this module, several supervised machine learning models were trained and evaluated to predict the success of SpaceX Falcon 9 launches.
+
+#### Models Evaluated
+
+- Logistic Regression (with hyperparameter tuning using GridSearchCV)
+- Support Vector Machine (SVM)
+- Decision Tree Classifier
+- K-Nearest Neighbors (KNN)
+
+All models were trained using standardized features and evaluated with a train/test split (80/20).
+
+#### Key Insights
+
+- The dataset was relatively small (90 samples), with only **18 samples in the test set**, which makes model generalization more challenging.
+- **Logistic Regression** provided stable performance and served as a strong baseline model after tuning.
+- For **Support Vector Machines**, the **sigmoid kernel** achieved the best performance on the validation dataset.
+- The **Decision Tree classifier**, after hyperparameter tuning, achieved a test accuracy of approximately **83.33%**, making it one of the best-performing models.
+- **KNN** performance was sensitive to feature scaling and the choice of neighbors, but did not outperform the tuned Decision Tree.
+- Overall, models that included regularization and controlled complexity (Logistic Regression and Decision Tree) performed better given the limited dataset size.
+
 
 ---
 
@@ -157,26 +179,15 @@ The project follows a structured data science methodology:
 
 ---
 
-## Insights from Folium Plotly Dash
+## Insights from Machine Learning Prediction
 
-This interactive dashboard enables dynamic exploration of SpaceX launch records by launch site and payload range. By combining dropdown filters, sliders, pie charts, and scatter plots, it provides actionable insights into launch success patterns:
+### Best Performing Model
 
-- **Which site has the largest successful launches?**  
-  KSC LC-39A has the largest absolute number of successful launches among all sites.
+Based on the test accuracy comparison, **Logistic Regression**, **Support Vector Machine (SVM)**, and **K-Nearest Neighbors (KNN)** achieved the highest accuracy, each with approximately **83.33%**.  
 
-- **Which site has the highest launch success rate?**  
-  KSC LC-39A also shows the highest launch success rate, with the largest proportion of successful launches relative to failures.
+The **Decision Tree** model performed slightly worse, with an accuracy of about **77.78%**.  
 
-- **Which payload range(s) has the highest launch success rate?**  
-  Payloads in the mid-range (approximately 2,000 kg to 6,000 kg) show the highest concentration of successful launches.
-
-- **Which payload range(s) has the lowest launch success rate?**  
-  Very low payloads (below 1,000 kg) and very high payloads (above 8,000 kg) exhibit lower success rates and a higher proportion of failures.
-
-- **Which Falcon 9 Booster version has the highest launch success rate?**
-  The Falcon 9 Full Thrust (FT) booster version demonstrates the highest launch success rate, followed closely by B4 and B5, while earlier versions (v1.0 and v1.1) show lower reliability.
-
-These insights highlight how launch site maturity, optimal payload ranges, and booster evolution significantly impact mission success.
+Overall, multiple models showed comparable performance, but simpler models such as Logistic Regression and KNN achieved the best results on this dataset.
 
 ---
 
@@ -215,7 +226,7 @@ jupyter notebook
 ## Project Status
 
  **In progress**  
-Currently working on **Module 3: Interactive Visual Analytics and Dashboards**
+Currently working on **Module 5: Present Data-Driven Insights**
 
 ---
 
