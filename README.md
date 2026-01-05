@@ -30,6 +30,7 @@ ibm-datascience-capstone-spacex/
 │
 ├─ data/
 │ └─ raw/
+│   ├─  spacex_launch_geo.csv
 │   └─  spacex.csv
 │
 │ └─ processed/
@@ -101,6 +102,7 @@ Exploration of relationships between launch success and variables such as payloa
 **Notebooks:**  
 
 - `06.Interactive_Visual_Analytics_with_Folium.ipynb`
+
 - `07.Interactive_Visual_Analytics_with_Plotly_Dash.ipynb`  
 
 Geospatial analysis of launch sites and interactive dashboards for deeper insight exploration.
@@ -134,17 +136,23 @@ The project follows a structured data science methodology:
 
 ---
 
-## Preliminary Insights (Early Findings)
+## Geospatial Insights from Folium Analysis
 
-Based on exploratory data analysis performed using SQL queries and visual analytics, the following insights have been identified:
+Using interactive maps built with Folium, the spatial distribution of SpaceX launch sites was analyzed to understand geographical and infrastructural patterns. The following questions were addressed based on visual inspection and distance measurements:
 
-- Launch success rates vary significantly across launch sites, indicating that site-specific operational conditions may influence first-stage landing outcomes.
-- Payload mass shows a clear relationship with launch success, where extremely low and extremely high payloads tend to have lower success rates compared to mid-range payloads.
-- Certain orbit types are associated with higher launch success, suggesting that mission profile and orbital requirements impact landing feasibility.
-- Newer Falcon 9 booster versions exhibit higher success rates compared to earlier versions, highlighting the impact of technological iteration and operational learning.
-- The proportion of successful landings has increased over time, reflecting SpaceX’s progressive improvement in reusability and recovery techniques.
+- **Are launch sites in close proximity to railways?**  
+  Yes. Launch sites are generally located near railway infrastructure, which facilitates the transportation of large and heavy rocket components.
 
-These EDA findings inform feature selection and hypothesis formulation for the predictive modeling stage.
+- **Are launch sites in close proximity to highways?**  
+  Yes. All launch sites are located close to highways, indicating intentional planning to ensure accessibility and efficient ground transportation.
+
+- **Are launch sites in close proximity to coastline?**  
+  Yes. All SpaceX launch sites are situated near coastlines, which aligns with safety requirements and allows launch trajectories over the ocean.
+
+- **Do launch sites keep certain distance away from cities?**  
+  Yes. Launch sites are located at a safe distance from major cities, reducing risk to populated areas and ensuring operational safety.
+
+These geospatial insights highlight the importance of location, safety, and logistics in launch site selection and provide valuable context for subsequent predictive analysis.
 
 ---
 
@@ -183,7 +191,7 @@ jupyter notebook
 ## Project Status
 
  **In progress**  
-Currently working on **Module 1: Introduction & Data Collection**
+Currently working on **Module 3: Interactive Visual Analytics and Dashboards**
 
 ---
 
