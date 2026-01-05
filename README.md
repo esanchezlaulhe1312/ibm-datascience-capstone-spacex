@@ -152,10 +152,7 @@ All models were trained using standardized features and evaluated with a train/t
 - The dataset was relatively small (90 samples), with only **18 samples in the test set**, which makes model generalization more challenging.
 - **Logistic Regression** provided stable performance and served as a strong baseline model after tuning.
 - For **Support Vector Machines**, the **sigmoid kernel** achieved the best performance on the validation dataset.
-- The **Decision Tree classifier**, after hyperparameter tuning, achieved a test accuracy of approximately **83.33%**, making it one of the best-performing models.
-- **KNN** performance was sensitive to feature scaling and the choice of neighbors, but did not outperform the tuned Decision Tree.
-- Overall, models that included regularization and controlled complexity (Logistic Regression and Decision Tree) performed better given the limited dataset size.
-
+- All classification models (Logistic Regression, SVM, KNN, and Decision Tree) achieved an accuracy of 83.33% on the test dataset in the final evaluation. A subsequent execution showed a lower accuracy (77.78%) for the Decision Tree classifier, which is attributed to the small test sample size and the sensitivity of tree-based models to data splitting. Overall, model performances are comparable, and no single model clearly outperforms the others.
 
 ---
 
