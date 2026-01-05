@@ -136,15 +136,15 @@ The project follows a structured data science methodology:
 
 ## Preliminary Insights (Early Findings)
 
-Based on the data collection, web scraping, data wrangling, and exploratory analysis completed so far, the following preliminary insights can be highlighted:
+Based on exploratory data analysis performed using SQL queries and visual analytics, the following insights have been identified:
 
-- SpaceX launch data originates from heterogeneous sources, requiring careful data integration and cleaning before analysis.
-- Launch success is influenced by multiple operational variables such as launch site, orbit type, and payload mass, suggesting a multivariate relationship rather than a single dominant factor.
-- Launch sites are consistently located near coastlines, indicating that geographical and safety constraints play a significant role in site selection.
-- Proximity to highways and railways suggests intentional logistical planning to support transportation of large and heavy launch components.
-- The dataset contains a mix of numerical and categorical variables, making feature engineering and encoding strategies critical for predictive modeling.
+- Launch success rates vary significantly across launch sites, indicating that site-specific operational conditions may influence first-stage landing outcomes.
+- Payload mass shows a clear relationship with launch success, where extremely low and extremely high payloads tend to have lower success rates compared to mid-range payloads.
+- Certain orbit types are associated with higher launch success, suggesting that mission profile and orbital requirements impact landing feasibility.
+- Newer Falcon 9 booster versions exhibit higher success rates compared to earlier versions, highlighting the impact of technological iteration and operational learning.
+- The proportion of successful landings has increased over time, reflecting SpaceX’s progressive improvement in reusability and recovery techniques.
 
-These insights guide the subsequent stages of feature selection, model development, and evaluation.
+These EDA findings inform feature selection and hypothesis formulation for the predictive modeling stage.
 
 ---
 
