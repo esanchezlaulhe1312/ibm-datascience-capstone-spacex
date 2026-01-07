@@ -223,6 +223,9 @@ This project is licensed under the MIT License.
 ## Author
 
 Elena Sánchez Laulhé
+
 [Coursera](https://www.coursera.org/learner/elena-sanchez-laulhe-1312)
-[LinkedIn](https://www.linkedin.com/in/elena-sanchez-laulhe/)  
+
+[LinkedIn](https://www.linkedin.com/in/elena-sanchez-laulhe/)
+
 [GitHub](https://github.com/esanchezlaulhe1312)
