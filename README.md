@@ -51,14 +51,11 @@ ibm-datascience-capstone-spacex/
 │ └─ 08.Machine_Learning_Prediction_Lab.ipynb
 │
 ├─ reports/
-│ ├─ figures/
-│ └─ slides/
-│
-├─ docs/
-│ └─ IBM_Capstone_Report.docx
+│ └─ ibm_capstone_spacex_ppt_Rev0.pdf
 │
 ├─ images/
 │ ├─ plotly_dash_screenshots/
+│ ├─ figures/
 │ └─ logos/
 │
 ├─ README.md
@@ -74,24 +71,27 @@ ibm-datascience-capstone-spacex/
 
 **Notebook:** `01.Data_collection_API_Lab.ipynb`  
 
-- Data retrieval using REST APIs  
-- JSON parsing and transformation into Pandas DataFrames  
+- Data retrieval using the SpaceX REST API
+- Extraction of launch, payload, rocket, landing, and site information
+- Parsing nested JSON responses into structured Pandas DataFrames
 
 ### 2. Data Collection — Web Scraping
 
 **Notebook:** `02.Data_collection_Web_Scraping_Lab.ipynb`  
 
-- Web scraping from Wikipedia  
+- Web scraping of historical launch data from Wikipedia
 - HTML parsing with BeautifulSoup  
-- Extraction of tabular launch data  
+- Cleaning and structuring tabular data for analysis
 
 ### 3. Data Wrangling
 
 **Notebook:** `03.Data_Wrangling.ipynb`  
 
-- Data cleaning and preprocessing  
-- Handling missing values and inconsistent formats  
-- Feature preparation for exploratory analysis  
+- Handling missing values and inconsistent formats
+- Removing irrelevant and redundant features
+- Encoding categorical variables
+- Feature scaling for machine learning compatibility
+- Definition of a binary target variable (class) representing launch success
 
 ### 4. Exploratory Data Analysis (EDA)
 
@@ -145,14 +145,12 @@ In this module, several supervised machine learning models were trained and eval
 - Decision Tree Classifier
 - K-Nearest Neighbors (KNN)
 
-All models were trained using standardized features and evaluated with a train/test split (80/20).
-
 #### Key Insights
 
-- The dataset was relatively small (90 samples), with only **18 samples in the test set**, which makes model generalization more challenging.
-- **Logistic Regression** provided stable performance and served as a strong baseline model after tuning.
-- For **Support Vector Machines**, the **sigmoid kernel** achieved the best performance on the validation dataset.
-- All classification models (Logistic Regression, SVM, KNN, and Decision Tree) achieved an accuracy of 83.33% on the test dataset in the final evaluation. A subsequent execution showed a lower accuracy (77.78%) for the Decision Tree classifier, which is attributed to the small test sample size and the sensitivity of tree-based models to data splitting. Overall, model performances are comparable, and no single model clearly outperforms the others.
+- The dataset is relatively small (~90 samples), with a limited test set size, making generalization challenging.
+- Logistic Regression, SVM, and KNN achieved similar test accuracy (~83.33%).
+- Decision Tree performance showed higher sensitivity to data splitting, achieving slightly lower accuracy.
+- Comparable performance across models suggests that launch success is partially predictable but influenced by complex, non-linear factors.
 
 ---
 
@@ -160,6 +158,7 @@ All models were trained using standardized features and evaluated with a train/t
 
 - **SpaceX REST API** — Historical launch records  
 - **Wikipedia** — Supplementary launch and mission data (web scraped)  
+- **IBM Skills Network** — curated Falcon 9 datasets used during the course
 
 ---
 
@@ -173,18 +172,6 @@ The project follows a structured data science methodology:
 4. Interactive visual analytics and dashboards  
 5. Predictive analysis using classification models  
 6. Communication of data-driven insights  
-
----
-
-## Insights from Machine Learning Prediction
-
-### Best Performing Model
-
-Based on the test accuracy comparison, **Logistic Regression**, **Support Vector Machine (SVM)**, and **K-Nearest Neighbors (KNN)** achieved the highest accuracy, each with approximately **83.33%**.  
-
-The **Decision Tree** model performed slightly worse, with an accuracy of about **77.78%**.  
-
-Overall, multiple models showed comparable performance, but simpler models such as Logistic Regression and KNN achieved the best results on this dataset.
 
 ---
 
@@ -222,8 +209,8 @@ jupyter notebook
 
 ## Project Status
 
- **In progress**  
-Currently working on **Module 5: Present Data-Driven Insights**
+ **Completed**
+Final submission for **Module 5: Present Data-Driven Insights**
 
 ---
 
@@ -236,3 +223,6 @@ This project is licensed under the MIT License.
 ## Author
 
 Elena Sánchez Laulhé
+[Coursera](https://www.coursera.org/learner/elena-sanchez-laulhe-1312)
+[LinkedIn](https://www.linkedin.com/in/elena-sanchez-laulhe/)  
+[GitHub](https://github.com/esanchezlaulhe1312)

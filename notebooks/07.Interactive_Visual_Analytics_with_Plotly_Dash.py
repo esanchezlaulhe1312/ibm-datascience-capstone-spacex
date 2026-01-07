@@ -90,7 +90,7 @@ def get_pie_chart(entered_site):
 
 def something(site_dropdown, payload_slider ):   
     if site_dropdown == 'ALL':
-        payload_slider == [min_payload, max_payload]
+        payload_slider = [min_payload, max_payload]
         payload_mask = (spacex_df['Payload Mass (kg)'] >= payload_slider[0]) & (spacex_df['Payload Mass (kg)'] <= payload_slider [1])
         payload_data = spacex_df[payload_mask]
         fig = px.scatter(payload_data, x= 'Payload Mass (kg)', y = 'class', color= 'Booster Version Category')
